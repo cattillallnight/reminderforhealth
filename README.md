@@ -20,13 +20,11 @@ This is your personal little helper for healthy habits, sprinkled with a touch o
 ## 🚀 Getting Started
 Clone this repo:
 
-```bash
 git clone https://github.com/yourusername/one-health-tip.git
 cd one-health-tip
 Then open the website:
 
-bash
-Copy code
+
 open index.html
 Or simply double-click index.html in your file explorer.
 
