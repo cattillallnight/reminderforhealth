@@ -7,25 +7,34 @@ This is your personal little helper for healthy habits, sprinkled with a touch o
 ---
 
 ## ✨ Features
-- 🎨 **Healthy & Magical Colors:** Mint green, sky blue, sunshine yellow, and lavender sparkles.  
-- 🃏 **Random Health Tips:** Each click shows a tip about Nutrition, Exercise, Mental Health, Sleep, Hydration, or Stress Management.  
-- 👾 **Animated Characters:** Tiny water drops, apples, clouds, or sneakers pop up with playful nudges like “💧 Don’t forget your water!”  
-- 🌀 **Smooth Animations:** Fade-in tip cards, button hover glows, floating sparkles/particles.  
-- 💌 **Favorites & Sharing:** Mark tips as favorite (saved in localStorage) and optionally share with friends.  
-- 📱 **Responsive Design:** Looks great on mobile, tablet, and desktop.  
-- 🎯 **Lightweight JS Analytics:** `trackEvent()` logs tip views to console.  
+- 🎨 Healthy & Magical Colors: Mint green, sky blue, sunshine yellow, and lavender sparkles.  
+- 🃏 Random Health Tips: Each click shows a tip about Nutrition, Exercise, Mental Health, Sleep, Hydration, or Stress Management.  
+- 👾 Animated Characters: Tiny water drops, apples, clouds, or sneakers pop up with playful nudges like “💧 Don’t forget your water!”  
+- 🌀 Smooth Animations: Fade-in tip cards, button hover glows, floating sparkles/particles.  
+- 💌 Favorites & Sharing: Mark tips as favorite (saved in localStorage) and optionally share with friends.  
+- 📱 Responsive Design: Looks great on mobile, tablet, and desktop.  
+- 🎯 Lightweight JS Analytics: `trackEvent()` logs tip views to console.  
 
 ---
 
 ## 🚀 Getting Started
-Clone this repo:
 
+Clone this repo and open it:
+
+```bash
 git clone https://github.com/yourusername/one-health-tip.git
 cd one-health-tip
 Then open the website:
 
+macOS
 
 open index.html
+Windows
+
+start index.html
+Linux
+
+xdg-open index.html
 Or simply double-click index.html in your file explorer.
 
 🧩 How It Works
