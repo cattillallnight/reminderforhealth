@@ -1,0 +1,478 @@
+/* Fresh & Magical Health Tips Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #c8f7c5);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background decorative elements */
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(156, 39, 176, 0.1);
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.3);
+    animation: float 15s infinite ease-in-out;
+}
+
+.bubble-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.bubble-2 {
+    width: 120px;
+    height: 120px;
+    top: 70%;
+    left: 85%;
+    animation-delay: -5s;
+}
+
+.bubble-3 {
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    left: 80%;
+    animation-delay: -10s;
+}
+
+.leaf {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(76, 175, 80, 0.2);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: float 20s infinite ease-in-out reverse;
+}
+
+.leaf-1 {
+    top: 20%;
+    left: 90%;
+    animation-delay: -3s;
+}
+
+.leaf-2 {
+    top: 80%;
+    left: 10%;
+    animation-delay: -8s;
+}
+
+.leaf-3 {
+    top: 50%;
+    left: 15%;
+    animation-delay: -15s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(159, 216, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(156, 39, 176, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+    background: linear-gradient(45deg, #4caf50, #2196f3, #9c27b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite, float 3s ease-in-out infinite;
+}
+
+/* Tip Button */
+.tip-button {
+    background: linear-gradient(45deg, #4caf50, #2196f3);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.tip-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.6);
+    background: linear-gradient(45deg, #2196f3, #4caf50);
+}
+
+.tip-button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.button-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.tip-button:hover .button-shine {
+    left: 100%;
+}
+
+/* Tip Card */
+.tip-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+    transform-origin: top center;
+}
+
+.tip-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #4caf50, #2196f3, #ffeb3b, #9c27b0);
+}
+
+.tip-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1), rgba(255, 235, 59, 0.1), rgba(156, 39, 176, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.tip-card:hover::after {
+    opacity: 1;
+}
+
+.tip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tip-type {
+    background: linear-gradient(45deg, #9c27b0, #ff9800);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.tip-title {
+    color: #333;
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.tip-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    border-radius: 3px;
+}
+
+.tip-description {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tip-emoji {
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem 0;
+    animation: bounce 2s infinite, rotateEmoji 8s infinite linear;
+    filter: drop-shadow(0 0 10px rgba(156, 39, 176, 0.5));
+}
+
+/* Character Reminder */
+.character {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: slideIn 0.5s ease-out, pulseGlow 3s infinite;
+    z-index: 100;
+    transform-origin: bottom right;
+}
+
+.character-emoji {
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+}
+
+.character-message {
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(156, 39, 176, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(156, 39, 176, 0.3);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 5px 20px rgba(156, 39, 176, 0.4);
+    }
+    100% {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes rotateEmoji {
+    from {
+        transform: rotate(0deg) translateY(0);
+    }
+    to {
+        transform: rotate(360deg) translateY(0);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Sparkling Particles */
+.particle {
+    position: absolute;
+    background-color: #9c27b0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    font-size: 1.5rem;
+    animation: sparkleAnimation 1.5s forwards;
+}
+
+@keyframes sparkleAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-50px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.5);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .tip-card {
+        padding: 1.5rem;
+    }
+    
+    .tip-title {
+        font-size: 1.5rem;
+    }
+    
+    .character {
+        max-width: 80%;
+        left: 10%;
+        right: 10%;
+        bottom: 10px;
+    }
+    
+    .bubble, .leaf {
+        display: none;
+    }
+}

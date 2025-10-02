@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Health Tips</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background-elements">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+            <div class="leaf leaf-3"></div>
+        </div>
+        
+        <header class="hero">
+            <h1 class="hero-title">✨ Magical Health Tips ✨</h1>
+            <button id="tipButton" class="tip-button">
+                <span class="button-text">Give Me a Tip!</span>
+                <div class="button-shine"></div>
+            </button>
+        </header>
+
+        <main class="tip-container">
+            <div id="tipCard" class="tip-card hidden">
+                <div class="tip-header">
+                    <span id="tipType" class="tip-type"></span>
+                    <h2 id="tipTitle" class="tip-title"></h2>
+                </div>
+                <p id="tipDescription" class="tip-description"></p>
+                <div id="tipEmoji" class="tip-emoji"></div>
+            </div>
+            
+            <!-- Magical Characters -->
+            <div id="character" class="character hidden">
+                <span id="characterEmoji" class="character-emoji"></span>
+                <p id="characterMessage" class="character-message"></p>
+            </div>
+        </main>
+        
+        <!-- Particles for magical effect -->
+        <div id="particles"></div>
+        <div id="sparkles"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
